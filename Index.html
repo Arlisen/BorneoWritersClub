@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borneo Writers Club</title>
+    <style>
+        /* Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Membuat efek meluncur halus saat menu diklik */
+        }
+
+        body {
+            background-color: #0f0f0f; /* Latar Belakang Gelap */
+            color: #d1d1d1; /* Teks Abu-abu Muda */
+            font-family: 'Courier New', Courier, monospace; /* Font seperti mesin ketik */
+            line-height: 1.6;
+        }
+
+        /* Header & Navigasi */
+        header {
+            background-color: #000000;
+            padding: 20px 0;
+            border-bottom: 2px solid #5a0000; /* Garis Merah Gelap */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #b8860b; /* Emas Tua */
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff3333;
+        }
+
+        /* Container Utama */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Gambar Banner Gunung Meratus (KEMBALI MEMANJANG PENUH) */
+        .banner-img {
+            display: block;
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover; /* Mengembalikan gambar agar penuh memanjang */
+            background-color: #050505;
+            border-bottom: 1px solid #333;
+        }
+
+        /* Bagian Selamat Datang / Intro */
+        .intro-section {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-left: 4px solid #5a0000;
+            margin-bottom: 50px;
+            margin-top: 30px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .intro-section h2 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-family: 'Georgia', serif;
+        }
+
+        .intro-section p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Bagian About Us Quick Look */
+        .about-box {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-left: 4px solid #5a0000;
+            margin-top: 70px; /* Jarak atas ditenangkan agar tidak menempel ke novel */
+            margin-bottom: 50px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .about-title {
+            background-color: #8b0000; 
+            color: #ffffff; 
+            padding: 10px 15px; 
+            font-weight: bold; 
+            font-family: 'Georgia', serif; 
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            display: inline-block;
+            text-transform: none; /* Dimatikan dari uppercase agar tidak Caps Lock lagi */
+        }
+
+        /* Bagian Novel Unggulan */
+        .novel-spotlight {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            border: 1px solid #333;
+            background: linear-gradient(to bottom, #1a1a1a, #0f0f0f);
+        }
+
+        .novel-title {
+            font-size: 2rem;
+            color: #ff3333;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+        }
+
+        .novel-meta {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .btn-buy {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: #5a0000;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #ff3333;
+            transition: background 0.3s;
+        }
+
+        .btn-buy:hover {
+            background-color: #800000;
+            box-shadow: 0 0 10px #5a0000;
+        }
+
+        /* Bagian Members */
+        .members-section {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-left: 4px solid #b8860b;
+            margin-bottom: 50px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .members-section h2 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Strip Judul Emas (Style Honkaku Jepang) */
+        .strip-header-gold {
+            background-color: #b8860b; 
+            color: #000000;            
+            padding: 14px 20px; 
+            font-family: 'Georgia', serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 30px; 
+            margin-bottom: 25px;       
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Borneo Writers Club</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about-box-id">About Us</a>
+            <a href="#anthology.html">Anthology</a>
+            <a href="#members-section-id">Members</a>
+        </nav>
+    </header>
+
+    <img src="Gunung Meratus.jpeg" alt="Gunung Meratus" class="banner-img">
+     
+    <div class="container">
+        
+        <section class="intro-section">
+            <h2>Selamat Datang di Borneo Writers Club</h2>
+            <p>
+                Ini adalah paragraf pertama di website baru saya <strong>Borneo Writers Club</strong>. 
+                Borneo Writer's Club yang pertama kali <strong>dibuat</strong> di Indonesia, ucap terima kasih atas kerja keras <strong>Jensen Arlisen</strong>, <strong>Mrs. Rita MF Jannah</strong>, dan teman-teman Club.
+            </p>
+            <p>
+                Borneo Writers Club sudah berdiri sejak <strong>28 July 2024</strong>. Di Borneo Writer's Club ini merupakan tempat untuk anak muda Borneo dapat berkreasi dan memaparkan ide kreatifnya dengan bebas. Club ini telah dikembangkan oleh dua orang penulis, sebelum terbentuknya Club ini Jensen Arlisen yang merupakan seorang Author pemula sudah pernah berkerjasama sebelumnya dengan dua orang Author lainnya, "The Decaying City" yang di tulis oleh Jensen Arlisen dengan dua teman lainnya, kini Novel "The Decaying City" masih beroperasi sampai sekarang, Jensen Arlisen yang telah melanjutkan Novel "The Decaying City" seorang diri.
+            </p> 
+        </section>
+
+        <section class="novel-spotlight">
+            <h3>Novel</h3>
+            <hr style="width: 50px; margin: 20px auto; border-color: #5a0000;">
+            <img src="Front_Cover.jpeg" alt="Front Cover" width="300" style="display: block; margin: 0 auto 20px auto;">
+            
+            <div class="novel-title">"The Decaying City"</div>
+            <p class="novel-meta">Penulis: Jensen Arlisen | Penerbit: Noveltoon</p>
+            
+            <p style="max-width: 600px; margin: 20px auto;">
+                Sebuah kisah tentang kehancuran dan kota yang terlupakan. Apakah kau berani memasuki kota yang terbengkalai?
+            </p>
+            <a href="https://noveltoon.mobi/id/share/3881415" target="_blank" class="btn-buy">Baca Sekarang</a>
+        </section>
+
+        <section id="about-box-id" class="about-box">
+            <div class="about-title">About Us</div>
+            <p>Borneo writers' club adalah komunitas yang diperuntukkan bagi anak bangsa Borneo berkreasi dan mengekspresikan dirinya ke dalam suatu karya sastra.</p>
+        </section>
+
+        <section id="members-section-id" class="members-section">
+            <h2>Members</h2>
+            
+            <div style="line-height: 1.8; margin-bottom: 20px; margin-top: 15px;">
+                <p><strong>Ketua:</strong> Jensen Arlisen</p>
+                <p><strong>Pendamping:</strong> Mrs. Rita MF Jannah</p>
+                <p><strong>Wakil Ketua:</strong> -</p>
+            </div>
+
+            <div class="strip-header-gold">
+                MEMBER LIST
+            </div>
+            
+            <div style="padding-left: 5px; line-height: 2;">
+                <p>Alsa</p>
+                <p>Ainool</p>
+                <p>GoodOlJenkins</p>
+                <p>Toppinges.teler</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Borneo Writer's Club. All Rights Reserved.</p>
+        <p>Terima kasih kepada seluruh anggota club.</p>
+    </footer>
+
+</body>
+</html>
